@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # Trigger CI/CD only on pushes to main
+      - main
 
 jobs:
   build:
@@ -17,12 +17,10 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Log in to DockerHub
-        if: ${{ secrets.DOCKER_USERNAME != '' && secrets.DOCKER_PASSWORD != '' }}
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build Docker Image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/bda-project:latest .
 
       - name: Push to DockerHub
-        if: ${{ secrets.DOCKER_USERNAME != '' && secrets.DOCKER_PASSWORD != '' }}
         run: docker push ${{ secrets.DOCKER_USERNAME }}/bda-project:latest
