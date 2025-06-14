@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/University/Semester%2006/Big%20Data/final%20theory/project%202/mlruns/983448455523902742/0ba7a9dc09c5434f91187c13cd53cca4/artifacts
+end_time: 1749561080865
+entry_point_name: ''
+experiment_id: '983448455523902742'
+lifecycle_stage: active
+run_id: 0ba7a9dc09c5434f91187c13cd53cca4
+run_name: RandomForest
+run_uuid: 0ba7a9dc09c5434f91187c13cd53cca4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749561073484
+status: 3
+tags: []
+user_id: aaamu
